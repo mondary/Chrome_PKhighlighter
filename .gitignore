@@ -34,3 +34,11 @@ coverage/
 *.swp
 *.swo
 -pk/
+.agent
+/AGENT.md
+/AGENTS.md
+/CLAUDE.md
+/CODEX.md
+/GEMINI.md
+/GLM.md
+/OPENCODE.md
