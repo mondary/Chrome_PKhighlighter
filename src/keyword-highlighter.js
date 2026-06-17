@@ -1,16 +1,6 @@
-// ==UserScript==
-// @name         PK Keyword Highlighter
-// @namespace    https://github.com/mondary
-// @version      0.4.0
-// @description  Highlight keywords with colors and strike-through excluded terms, per site.
-// @match        *://*/*
-// @run-at       document-start
-// @grant        none
-// ==/UserScript==
 
 /*
 Usage:
-- Install with a userscript manager (Tampermonkey/Violentmonkey).
 - Click the "HL" button to open the panel.
 - Enter comma-separated keywords to highlight and exclude, then Save.
 - Settings persist per hostname via localStorage.
@@ -1344,6 +1334,19 @@ Usage:
     scheduleApply();
     window.addEventListener("hashchange", scheduleApply);
     window.addEventListener("popstate", scheduleApply);
+
+    chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
+      if (request.action === "toggle-fab") {
+        const toggle = document.getElementById(toggleId);
+        const overlay = document.getElementById(overlayId);
+        if (toggle) {
+          toggle.style.display = toggle.style.display === "none" ? "inline-flex" : "none";
+        }
+        if (overlay) {
+          overlay.style.display = toggle.style.display === "none" ? "none" : (overlay.classList.contains("pkh-open") ? "block" : "none");
+        }
+      }
+    });
   }
 
   if (document.readyState === "loading") {
