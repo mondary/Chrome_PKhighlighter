@@ -405,9 +405,6 @@ Usage:
   function createStyles() {
     const style = document.createElement("style");
     style.textContent = `
-      @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
-      @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css');
-
       #${toggleId} {
         position: fixed;
         right: 16px;
@@ -428,6 +425,13 @@ Usage:
         display: inline-flex;
         align-items: center;
         justify-content: center;
+      }
+
+      #${toggleId} svg {
+        width: 18px;
+        height: 18px;
+        display: block;
+        pointer-events: none;
       }
 
       #${overlayId} {
@@ -660,7 +664,7 @@ Usage:
       }
 
       #${overlayId} .pkh-preview-candy {
-        font-family: "Fredoka One", cursive;
+        font-family: "Comic Sans MS", "Chalkboard SE", "Marker Felt", ui-rounded, system-ui, sans-serif;
         color: #111;
         text-shadow: 0 0 0 #fff;
       }
@@ -911,7 +915,7 @@ Usage:
 
       .pkh-candy {
         position: relative;
-        font-family: "Fredoka One", cursive;
+        font-family: "Comic Sans MS", "Chalkboard SE", "Marker Felt", ui-rounded, system-ui, sans-serif;
         font-size: 18px;
         filter: drop-shadow(0 0 5px #777);
       }
@@ -941,8 +945,17 @@ Usage:
     toggle.type = "button";
     toggle.setAttribute("aria-label", "Keyword Highlighter");
     toggle.title = "Keyword Highlighter";
-    const icon = document.createElement("i");
-    icon.className = "fa-solid fa-highlighter";
+    const svgNs = "http://www.w3.org/2000/svg";
+    const icon = document.createElementNS(svgNs, "svg");
+    icon.setAttribute("viewBox", "0 0 576 512");
+    icon.setAttribute("aria-hidden", "true");
+    const path = document.createElementNS(svgNs, "path");
+    path.setAttribute("fill", "currentColor");
+    path.setAttribute(
+      "d",
+      "M120 472H32c-13.3 0-24 10.7-24 24s10.7 24 24 24h88c13.3 0 24-10.7 24-24s-10.7-24-24-24zm357.2-374.4L500.7 74.1c16.4-16.4 16.4-43 0-59.4l-3.7-3.7c-16.4-16.4-43-16.4-59.4 0L413 34.6 477.2 98.8zM380.9 66.7L67.6 379.9 32.5 484.5c-2.4 7.2-.6 15.1 4.7 20.4s13.2 7.1 20.4 4.7l104.6-35.1L475.4 161.3l-94.5-94.6z"
+    );
+    icon.appendChild(path);
     toggle.appendChild(icon);
 
     const overlay = document.createElement("div");

@@ -6,7 +6,7 @@ PKhighlighter respecte la vie privée de ses utilisateurs. Cette extension ne co
 
 ## Données collectées
 - **Aucune donnée personnelle :** L'extension ne collecte aucune information permettant d'identifier l'utilisateur.
-- **Stockage local :** Toutes les configurations (mots-clés, styles, préférences par domaine) sont stockées exclusivement sur votre appareil via l'API `chrome.storage.local`. Aucune donnée n'est synchronisée avec des serveurs tiers.
+- **Stockage local :** Toutes les configurations (mots-clés, styles, préférences par domaine) sont stockées exclusivement sur votre appareil via l'API `window.localStorage`, avec des clés dédiées au domaine courant. Aucune donnée n'est synchronisée avec des serveurs tiers.
 - **Données de navigation :** Bien que l'extension accède au contenu des pages web pour effectuer le surlignage, ces données sont traitées uniquement en mémoire locale, de manière temporaire, et ne sont jamais transmises à l'extérieur.
 
 ## Modifications

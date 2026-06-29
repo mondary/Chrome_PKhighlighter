@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.4.2
+- Remove remote code (`@import` from Google Fonts and Font Awesome CDNs) to comply with the Chrome Web Store remote code ban.
+- Replace the Font Awesome highlighter icon with an inline SVG (no external dependency).
+- Replace the Fredoka One web font with a system rounded font stack for the Candy style.
+- Trusted-Types-safe SVG construction (no `innerHTML`).
+
+## 0.4.1
+- Remove unused `storage` permission to comply with Chrome Web Store policy.
+- Settings still persist via `window.localStorage` (no permission required).
+
 ## 0.3.7
 - Add Offset style (renamed from Normal) with a shifted highlight.
 - Fix Offset text color for readability.

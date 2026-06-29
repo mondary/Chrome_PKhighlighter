@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "PKhighlighter",
-  "version": "0.4.0",
+  "version": "0.4.2",
   "description": "Highlight keywords with colors and strike-through excluded terms, per site.",
   "icons": {
     "16": "icon.png",
@@ -24,6 +24,5 @@
       "js": ["keyword-highlighter.js"],
       "run_at": "document_start"
     }
-  ],
-  "permissions": ["storage"]
+  ]
 }
