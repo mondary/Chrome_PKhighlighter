@@ -1,8 +1,9 @@
 {
   "manifest_version": 3,
-  "name": "PKhighlighter",
-  "version": "0.4.2",
-  "description": "Highlight keywords with colors and strike-through excluded terms, per site.",
+  "name": "PK Highlighter",
+  "version": "0.4.3",
+  "description": "Highlight keywords with custom colors. Made by PK-Labs.",
+  "short_name": "PK-Labs HL",
   "icons": {
     "16": "icon.png",
     "48": "icon.png",
