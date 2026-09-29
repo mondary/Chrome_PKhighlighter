@@ -6,6 +6,8 @@
 
 ✨ A userscript that highlights keywords and strikes through excluded phrases, with multiple visual styles.
 
+Version: **2026.09.1**
+
 ## ✅ Features
 - **Automatic Highlighting** : Immediate visual emphasis of keywords.
 - **Smart Exclusion** : Strikes through excluded phrases in red to prevent false positives.
@@ -27,9 +29,11 @@
 - The script ignores input fields and its own UI panel.
 
 ## 🧾 Changelog
+- 2026.09.1: Store media kit (banner, card, screenshots, video, description).
 - 1.0.0: Initial release.
 
 ## 🔗 Links
+- Support: [Ko-fi](https://ko-fi.com/pouark)
 - FR README: README.md
 - Main file: `keyword-highlighter.user.js`
 - History: `CHANGELOG.md`

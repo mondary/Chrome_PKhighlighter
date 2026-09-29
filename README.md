@@ -6,6 +6,8 @@
 
 ✨ Un userscript qui surligne des mots-clés et barre ceux que vous excluez, avec plusieurs styles visuels. Made by PK-Labs.
 
+Version : **2026.09.1**
+
 ## ✅ Fonctionnalités
 - **Surlignage automatique** : Mise en évidence immédiate des mots-clés.
 - **Exclusion intelligente** : Barre les phrases exclues en rouge pour éviter les faux positifs.
@@ -28,6 +30,7 @@
 
 ## 🧾 Changelog
 
+- 2026.09.1 : Kit média store (bannière, carte, captures, vidéo, description)
 - 0.4.3 : Mise à jour branding PK-Labs, noms cohérents et descriptions optimisées
 - 0.4.2 : Améliorations des styles visuels
 - 0.4.1 : Fix compatibilité Chrome Extension Manifest V3
@@ -38,6 +41,7 @@
 - **Chrome Web Store** : [PK Highlighter](https://chromewebstore.google.com/detail/)
 - **Politique de Confidentialité** : [GitHub Pages](https://mondary.github.io/Chrome_PKhighlighter/store/privacy-policy-pk-highlighter.html)
 - **Site** : [mondary.design](https://mondary.design)
+- **Don / Support** : [Ko-fi](https://ko-fi.com/pouark)
 - **Description** : [store/DESCRIPTION.md](store/DESCRIPTION.md)
 - EN README : README_en.md
 - Fichier principal : `keyword-highlighter.user.js`

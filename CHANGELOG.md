@@ -1,5 +1,9 @@
 # Changelog
 
+## [2026.09.1] - 2026-09-29
+### Added
+- Store media kit: 1544x500 banner, 1200x675 card, live/retina screenshots, demo video and store description.
+
 ## 0.4.2
 - Remove remote code (`@import` from Google Fonts and Font Awesome CDNs) to comply with the Chrome Web Store remote code ban.
 - Replace the Font Awesome highlighter icon with an inline SVG (no external dependency).
