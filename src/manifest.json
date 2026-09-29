@@ -1,7 +1,9 @@
 {
   "manifest_version": 3,
   "name": "PK Highlighter",
-  "version": "2026.09.1",
+  "version": "2026.9.2",
+  "version_name": "2026.09.2",
+  "homepage_url": "https://mondary.github.io/Chrome_PKhighlighter/store/",
   "description": "Highlight keywords with custom colors. Made by PK-Labs.",
   "short_name": "PK-Labs HL",
   "icons": {

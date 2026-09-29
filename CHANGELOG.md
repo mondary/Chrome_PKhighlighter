@@ -1,5 +1,13 @@
 # Changelog
 
+## [2026.09.2] - 2026-09-29
+### Added
+- Bilingual promo landing (`store/index.html`): FR/EN with detection + manual toggle, real captures, before/after comparison, seven-style picker, local GSAP/Three.js animation with reduced-motion and no-WebGL fallbacks.
+- Ko-fi support link inside the extension settings panel (FR/EN label, keyboard accessible).
+- Authentic media kit regenerated from the real extension UI: screenshots (before/after/settings), style previews, demo MP4 + wide and compact GIFs, banner and social card.
+### Fixed
+- Manifest version serialization for Chrome: `2026.9.2` (no leading zeros) with `version_name` `2026.09.2`, plus `homepage_url`.
+
 ## [2026.09.1] - 2026-09-29
 ### Added
 - Store media kit: 1544x500 banner, 1200x675 card, live/retina screenshots, demo video and store description.

@@ -699,6 +699,27 @@ Usage:
         gap: 6px;
       }
 
+      #${overlayId} .pkh-support {
+        display: block;
+        margin-top: 12px;
+        padding: 6px;
+        color: #444;
+        font-size: 11px;
+        text-align: center;
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+
+      #${overlayId} .pkh-support:hover {
+        color: #111;
+      }
+
+      #${overlayId} .pkh-support:focus-visible {
+        outline: 2px solid #1559d6;
+        outline-offset: 2px;
+        border-radius: 4px;
+      }
+
       #${overlayId} button {
         flex: 1;
         border: none;
@@ -1151,6 +1172,16 @@ Usage:
     overlay.appendChild(styleGrid);
     overlay.appendChild(actions);
 
+    const supportLink = document.createElement("a");
+    supportLink.className = "pkh-support";
+    supportLink.href = "https://ko-fi.com/pouark";
+    supportLink.target = "_blank";
+    supportLink.rel = "noopener noreferrer";
+    supportLink.textContent = (navigator.language || "fr").startsWith("en")
+      ? "Support PK Highlighter on Ko-fi ↗"
+      : "Soutenir PK Highlighter sur Ko-fi ↗";
+    overlay.appendChild(supportLink);
+
     let lastDragMoved = false;
 
     function setPosition(el, left, top) {
@@ -1182,7 +1213,7 @@ Usage:
         event.target !== toggle &&
         event.target &&
         event.target.closest &&
-        event.target.closest("input, select, button, textarea")
+        event.target.closest("input, select, button, textarea, a")
       ) {
         return;
       }

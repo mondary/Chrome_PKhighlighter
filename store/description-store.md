@@ -1,7 +1,7 @@
 # PK Highlighter — Dossier du store
 
 Matériel de présentation de l'application.
-Captures : `store/screenshots/`.
+Landing : `store/index.html` (bilingue FR/EN). Captures : `store/screenshots/`.
 
 ---
 
@@ -17,55 +17,64 @@ Captures : `store/screenshots/`.
 ## Description courte
 
 FR :
-> Surlignez des mots-clés et barrez les phrases exclues, avec 5 styles visuels.
+> Surlignez vos mots-clés et barrez les phrases exclues, avec 7 styles visuels.
 
 EN :
-> Highlight keywords and strike excluded phrases, with 5 visual styles.
+> Highlight your keywords and strike excluded phrases, with 7 visual styles.
 
 ## Description longue
 
 ### FR
 
-**PK Highlighter** est un outil de surlignage de mots-clés pour la recherche et l'analyse de contenu. Définissez vos termes à surligner et vos phrases à exclure : le script met en évidence les premiers et barre les secondes pour éviter les faux positifs.
+**PK Highlighter** est une extension Chrome de surlignage de mots-clés pour la recherche et
+l'analyse de contenu. Définissez vos termes à surligner et vos phrases à exclure : les premiers
+ressortent avec une couleur stable, les secondes sont barrées pour éviter les faux positifs.
 
 #### ✨ Fonctionnalités clés
 - **Surlignage automatique** — mise en évidence immédiate des mots-clés sur la page
-- **Exclusion intelligente** — les phrases exclues sont barrées en rouge pour éviter les faux positifs
-- **Styles visuels** — choix entre Normal, Bold, Origami, Candy et Sticker
-- **Persistance locale** — paramètres enregistrés par site via le stockage local
-- **Panneau de configuration** — bouton **HL** sur la page pour ouvrir le panneau et configurer les listes
-- **Application instantanée** — surlignage appliqué au chargement de la page, sur tous les sites web
+- **Exclusion intelligente** — les phrases exclues sont barrées en rouge
+- **7 styles visuels** — Sticker, Candy, Offset, Bold, Origami, Pastel, Synthwave
+- **Activation par site** — panneau ouvert depuis le bouton **HL**, « Ajouter ce site »
+- **Persistance locale** — réglages par site via le stockage local, rien ne quitte le navigateur
+- **Panneau déplaçable** — avec lien de soutien Ko-fi intégré
 
 ### EN
 
-**PK Highlighter** is a keyword highlighting tool for research and content analysis. Define the terms to highlight and the phrases to exclude: the script emphasizes the former and strikes through the latter to prevent false positives.
+**PK Highlighter** is a Chrome extension for research and content analysis. Define the terms to
+highlight and the phrases to exclude: the former stand out with a stable colour, the latter are
+struck through to prevent false positives.
 
 #### ✨ Key features
-- **Automatic highlighting** — immediate visual emphasis of keywords on the page
-- **Smart exclusion** — excluded phrases are struck through in red to prevent false positives
-- **Visual styles** — choose between Normal, Bold, Origami, Candy, and Sticker
-- **Local persistence** — per-site settings saved via local storage
-- **Configuration panel** — an **HL** button on the page opens the panel to configure your lists
-- **Instant application** — highlighting applied on page load, on all websites
+- **Automatic highlighting** — immediate visual emphasis of keywords
+- **Smart exclusion** — excluded phrases struck through in red
+- **7 visual styles** — Sticker, Candy, Offset, Bold, Origami, Pastel, Synthwave
+- **Per-site activation** — panel opened from the **HL** button, "Add this site"
+- **Local persistence** — per-site settings via local storage, nothing leaves the browser
+- **Draggable panel** — with built-in Ko-fi support link
 
 ## Captures
 
 | Fichier | Sujet |
 |---|---|
-| `01-surlignage-wikipedia.png` | Surlignage de mots-clés sur un article Wikipédia (1280×800) |
-| `02-surlignage-linkedin.png` | Surlignage sur une page d'offres d'emploi LinkedIn (1280×800) |
-| `03-surlignage-wikipedia-retina.png` | Article Wikipédia surligné, capture Retina plein écran |
-| `04-surlignage-linkedin-retina.png` | Page LinkedIn surlignée, capture Retina plein écran |
+| `05-reading-after.png` | Article de démonstration surligné (données fictives, 1280×800 @2x) |
+| `06-reading-before.png` | Le même article avant activation |
+| `07-settings.png` | Panneau de réglages réel ouvert, lien Ko-fi visible |
+| `08-before-settings.png` | Panneau ouvert avant activation du site |
+
+Les aperçus des sept styles vivent dans `assets/styles/` ; les GIF dans `gifs/` ;
+la vidéo de démonstration dans `videos/demo.mp4`.
 
 ## Offre
 
-- **Modèle** : Open Source
-- **Prix** : Gratuit
+- **Modèle** : gratuit, code source public
+- **Soutien** : [Ko-fi](https://ko-fi.com/pouark)
 
 ## Plateformes
 
-- Chrome Web Store : https://chromewebstore.google.com/detail/
+- Chrome Web Store : https://chromewebstore.google.com/detail/pk-highlighter/nnmkffkeilpnimdbiifhphpnflilhmno
+- Landing : https://mondary.github.io/Chrome_PKhighlighter/store/
 
 ## Liens
 
-- **Repo** : https://github.com/mondary/Chrome_pkhighlighter
+- **Repo** : https://github.com/mondary/Chrome_PKhighlighter
+- **Confidentialité** : https://mondary.github.io/Chrome_PKhighlighter/store/privacy-policy-pk-highlighter.html

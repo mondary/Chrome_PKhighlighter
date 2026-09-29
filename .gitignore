@@ -42,3 +42,6 @@ coverage/
 /GEMINI.md
 /GLM.md
 /OPENCODE.md
+
+# capture intermediates
+store/media-kit/frames/

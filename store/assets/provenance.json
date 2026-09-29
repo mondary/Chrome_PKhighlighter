@@ -1,0 +1,20 @@
+{
+  "wallpaper": {
+    "library": "premium-promo-media/assets/wallpapers",
+    "id": "8de42736e150",
+    "sha256": "8de42736e150d115544b825f7d306d620f0070389060d9e9400d78882cba0e9a",
+    "source_name": "Image ChatGPT 28 sept. 2026, 10_45_19.png",
+    "provenance": "User-provided appWall collection; visual selected by user-approved plan",
+    "crop": "50% 52%"
+  },
+  "screenshots": {
+    "source": "src/keyword-highlighter.js on store/media-kit/demo.html",
+    "viewport": [
+      1280,
+      800
+    ],
+    "device_scale_factor": 2,
+    "data": "fictional editorial text",
+    "bridge": "chrome.runtime.onMessage is a no-op in the web fixture; no installed-extension claim"
+  }
+}

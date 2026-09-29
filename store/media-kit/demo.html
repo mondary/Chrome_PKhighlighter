@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>La lecture, à votre rythme — page de démonstration</title>
+  <style>
+    *{box-sizing:border-box}body{margin:0;background:#fcfcfa;color:#252821;font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}header{height:76px;border-bottom:1px solid #e4e5df;display:flex;align-items:center;justify-content:space-between;padding:0 56px}.logo{font-size:23px;font-weight:760;letter-spacing:-1px}.logo i{display:inline-block;background:#34463c;width:17px;height:17px;border-radius:50%;margin-right:9px}nav{font-size:12px;color:#62675d;display:flex;gap:26px}.issue{font-size:11px;text-transform:uppercase;letter-spacing:1.4px}main{display:grid;grid-template-columns:130px 1fr 220px;gap:42px;padding:56px;max-width:1400px;margin:auto}aside{font-size:12px;color:#697163;padding-top:5px}aside strong{display:block;color:#343c30;margin-bottom:19px;font-weight:600}aside p{margin:12px 0}article{max-width:650px}.eyebrow{font-size:11px;text-transform:uppercase;letter-spacing:1.4px;color:#6d7466;margin:0 0 16px}h1{font-size:43px;line-height:1.1;letter-spacing:-1.8px;font-weight:680;margin:0 0 20px}.intro{font-size:19px;color:#62695c;line-height:1.5;margin-bottom:22px}.byline{font-size:11px;color:#73786e;padding:15px 0;border-top:1px solid #dedfd8;border-bottom:1px solid #dedfd8;margin-bottom:26px}article p{margin:0 0 19px}h2{font-size:23px;letter-spacing:-.5px;margin:27px 0 12px;line-height:1.35}.rail{border-left:1px solid #e3e5dd;padding-left:23px}.rail small{font-size:10px;letter-spacing:1.3px}.rail h3{font-size:19px;line-height:1.3;font-weight:550;color:#343c30}.rail .number{font-size:55px;letter-spacing:-3px;color:#d0d5c9;line-height:1.2}.rail p{font-size:12px;line-height:1.7}.note{border-top:1px solid #e0e2da;margin-top:24px;padding-top:18px;font-size:11px;color:#6c7367}@media(max-width:800px){main{grid-template-columns:1fr;padding:32px}.rail,main>aside{display:none}header{padding:0 32px}h1{font-size:36px}}
+  </style>
+</head>
+<body>
+  <header><div class="logo"><i></i>Les pages claires</div><nav><span>Idées</span><span>Pratiques</span><span>À lire</span></nav><span class="issue">Carnet de lecture · 01</span></header>
+  <main>
+    <aside><strong>Dans cet article</strong><p>Lire autrement</p><p>Choisir ses repères</p><p>Retrouver le fil</p><div class="note">Page de démonstration<br>Texte fictif</div></aside>
+    <article>
+      <p class="eyebrow">Prendre le temps de comprendre</p>
+      <h1>Moins de bruit.<br>Plus d’attention.</h1>
+      <p class="intro">Et si une meilleure lecture commençait simplement par les mots que l’on choisit de voir ?</p>
+      <div class="byline">LA RÉDACTION &nbsp; / &nbsp; CARNET #01 &nbsp; / &nbsp; LECTURE : 3 MIN</div>
+      <p>Au fil d’une recherche, les idées s’accumulent. Une page ouvre sur une autre, les références se croisent. Garder son attention sur ce qui compte devient alors un petit exercice quotidien.</p>
+      <p>La lecture n’a pas besoin d’être une course. Quelques mots-clés suffisent à créer des repères : un sujet, une idée, un nom que l’on veut retrouver. Ils nous aident à reprendre le fil, même dans un article dense.</p>
+      <h2>Des repères qui vous ressemblent</h2>
+      <p>Choisir ses mots-clés, c’est décider de ce qui mérite notre attention. On peut aussi écarter une expression comme contenu sponsorisé pour distinguer plus facilement les informations utiles.</p>
+      <p>Le but n’est pas de tout retenir. C’est de rendre la lecture plus personnelle, de laisser les idées importantes ressortir et de retrouver ses repères à la prochaine visite.</p>
+    </article>
+    <aside class="rail"><small>LE CARNET</small><div class="number">01</div><h3>Un peu de recul.<br>Une idée à la fois.</h3><p>Observer, sélectionner, revenir. Trois gestes simples pour garder un fil dans ses lectures.</p><div class="note">À explorer ensuite<br><strong>Organiser ses idées sans perdre le fil.</strong></div></aside>
+  </main>
+  <script>
+    // Capture fixture only: the UI/rendering below comes verbatim from src/.
+    // This bridge supplies the extension-toolbar message API outside an installed extension.
+    const state = new URLSearchParams(location.search);
+    const style = state.get('style') || 'sticker';
+    if (state.has('sample')) {
+      const sample = document.createElement('div');
+      sample.id = 'style-sample';
+      sample.textContent = 'attention';
+      sample.style.cssText = 'margin:180px 160px;font-size:64px;font-weight:600;line-height:1.4';
+      document.body.replaceChildren(sample);
+    }
+    localStorage.setItem('pkh:enabled-domains', JSON.stringify(state.has('before') ? [] : [location.hostname]));
+    localStorage.setItem('pkh:keyword-highlighter:' + location.hostname, JSON.stringify({highlight:['attention','mots-clés','repères'],exclude:['contenu sponsorisé'],style}));
+    window.chrome = window.chrome || {};
+    window.chrome.runtime = window.chrome.runtime || { onMessage: { addListener() {} } };
+  </script>
+  <script src="../../src/keyword-highlighter.js"></script>
+</body>
+</html>
