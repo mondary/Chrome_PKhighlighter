@@ -1,5 +1,9 @@
 # Changelog
 
+## [2026.10.1] - 2026-10-01
+### Added
+- Bouton Ko-fi dédié dans la section soutien de la landing (`store/index.html`) : pilule rouge aux couleurs de la marque (`#ff5e5b`), tasse au cœur en SVG inline (aucun CDN), libellés FR/EN, cible `noopener noreferrer`. Remplace le lien texte souligné.
+
 ## [2026.10.0] - 2026-10-01
 ### Changed
 - Refacto du dossier `store/` : nouveau dossier `listing/` regroupant le matériel de la fiche Chrome Web Store (description, captures 01–08, images promo), chemins mis à jour dans les README, les scripts du media-kit et la description.
