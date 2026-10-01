@@ -8,7 +8,7 @@
 
 Version: **2026.09.2**
 
-![Real highlighting on an article](store/screenshots/05-reading-after.png)
+![Real highlighting on an article](store/listing/screenshots/05-reading-after.png)
 
 ## ✅ Features
 - **Automatic highlighting**: keywords stand out immediately, with a stable colour per word.
@@ -51,4 +51,4 @@ Full history: [CHANGELOG.md](CHANGELOG.md)
 - **Source code**: [GitHub](https://github.com/mondary/Chrome_PKhighlighter)
 - **Privacy policy**: [GitHub Pages](https://mondary.github.io/Chrome_PKhighlighter/store/privacy-policy-pk-highlighter.html)
 - **Site**: [mondary.design](https://mondary.design)
-- **Store dossier**: [store/description-store.md](store/description-store.md)
+- **Store dossier**: [store/listing/description.md](store/listing/description.md)

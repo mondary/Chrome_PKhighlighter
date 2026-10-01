@@ -28,16 +28,16 @@ export async function capture({ taskSpace, spaceId = 26, base = 'http://127.0.0.
   };
   await go('?before');
   assert.equal(await page.evaluate(() => document.querySelectorAll('.pkh-token').length), 0);
-  await full('screenshots/06-reading-before.png');
+  await full('listing/screenshots/06-reading-before.png');
   await page.click('#pkh-toggle');
-  await full('screenshots/08-before-settings.png');
+  await full('listing/screenshots/08-before-settings.png');
   await go();
   await page.waitForSelector('.pkh-token');
   assert.ok(await page.evaluate(() => document.querySelectorAll('[data-pkh-exclude="1"]').length > 0));
-  await full('screenshots/05-reading-after.png');
+  await full('listing/screenshots/05-reading-after.png');
   await page.click('#pkh-toggle');
   await page.waitForSelector('#pkh-overlay.pkh-open');
-  await full('screenshots/07-settings.png');
+  await full('listing/screenshots/07-settings.png');
   await crop('#pkh-overlay', 'assets/settings.png', 16);
   const link = await page.evaluate(() => {
     const a = document.querySelector('.pkh-support');

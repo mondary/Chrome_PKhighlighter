@@ -9,7 +9,7 @@ Tout le kit média est produit depuis l'interface **réelle** de l'extension (co
 # 1. Serveur local (file:// casse les assets relatifs)
 python3 -m http.server 4176 --bind 127.0.0.1   # à la racine du repo
 
-# 2. Captures PNG (screenshots 05–08, panneau, 7 styles, contrôles Save/Clear/Ko-fi)
+# 2. Captures PNG (listing/screenshots 05–08, panneau, 7 styles, contrôles Save/Clear/Ko-fi)
 ego-browser nodejs -e 'const {capture}=await import("file://<repo>/store/media-kit/capture.mjs"); await capture({taskSpace});'
 
 # 3. Boucle vidéo (44 frames déterministes : before → panneau → activation → style Candy)

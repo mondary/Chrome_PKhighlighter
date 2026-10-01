@@ -1,5 +1,14 @@
 # Changelog
 
+## [2026.10.0] - 2026-10-01
+### Changed
+- Refacto du dossier `store/` : nouveau dossier `listing/` regroupant le matériel de la fiche Chrome Web Store (description, captures 01–08, images promo), chemins mis à jour dans les README, les scripts du media-kit et la description.
+- README carte ajouté (`store/README.md`) : rôle de chaque fichier, URLs publiques figées, flux de régénération.
+- Domaine personnalisé pour la landing : `pkhighlighter.mondary.design` (fichier `CNAME`, GitHub Pages).
+### Removed
+- Doublons PNG en racine (`PKhighlighter_1/2.png`, `screenshot_1/2_1280x800.png` — copies exactes de `listing/screenshots/01–04`).
+- `AGENTchromeWebStore.md` (guide du projet PK Chrome Shortcuts, copié par erreur) et `DESCRIPTION.md` (obsolète : 5 styles au lieu de 7), remplacés par `listing/description.md`.
+
 ## [2026.09.2] - 2026-09-29
 ### Added
 - Bilingual promo landing (`store/index.html`): FR/EN with detection + manual toggle, real captures, before/after comparison, seven-style picker, local GSAP/Three.js animation with reduced-motion and no-WebGL fallbacks.

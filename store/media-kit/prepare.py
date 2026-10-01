@@ -72,7 +72,7 @@ def main():
         icon.thumbnail((128, 128))
         icon.save(assets / 'icon-128.webp', quality=90)
     # Social exports: authentic screenshot composed with the selected wallpaper.
-    if (assets / 'wallpaper-1600.webp').exists() and (STORE / 'screenshots/07-settings.png').exists():
+    if (assets / 'wallpaper-1600.webp').exists() and (STORE / 'listing/screenshots/07-settings.png').exists():
         for width, height, name in [(1544, 500, 'banner-1544x500.png'), (1200, 630, 'card-1200x630.png')]:
             poster = Image.new('RGB', (width, height), '#f5f5f7')
             draw = ImageDraw.Draw(poster)
@@ -85,7 +85,7 @@ def main():
             photo_left = 650 if width > 1200 else 530
             wallpaper = ImageOps.fit(Image.open(assets / 'wallpaper-1600.webp'), (width - photo_left, height), centering=(.5, .52))
             poster.paste(wallpaper, (photo_left, 0))
-            screen = Image.open(STORE / 'screenshots/07-settings.png').convert('RGB')
+            screen = Image.open(STORE / 'listing/screenshots/07-settings.png').convert('RGB')
             target_width = width - photo_left - 50
             screen = screen.resize((target_width, round(target_width * screen.height / screen.width)), Image.Resampling.LANCZOS)
             y = (height - screen.height) // 2

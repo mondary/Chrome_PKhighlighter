@@ -8,7 +8,7 @@
 
 Version : **2026.09.2**
 
-![Surlignage réel sur un article](store/screenshots/05-reading-after.png)
+![Surlignage réel sur un article](store/listing/screenshots/05-reading-after.png)
 
 ## ✅ Fonctionnalités
 - **Surlignage automatique** : mise en évidence immédiate des mots-clés, avec une couleur stable par mot.
@@ -56,4 +56,4 @@ Historique complet : [CHANGELOG.md](CHANGELOG.md)
 - **Code source** : [GitHub](https://github.com/mondary/Chrome_PKhighlighter)
 - **Politique de confidentialité** : [GitHub Pages](https://mondary.github.io/Chrome_PKhighlighter/store/privacy-policy-pk-highlighter.html)
 - **Site** : [mondary.design](https://mondary.design)
-- **Dossier du store** : [store/description-store.md](store/description-store.md)
+- **Dossier du store** : [store/listing/description.md](store/listing/description.md)
