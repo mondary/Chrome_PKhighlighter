@@ -20,7 +20,7 @@ Direction approuvée le 29 septembre 2026 — source de vérité pour toute rég
 3. **Styles & réglages** — sélecteur des 7 styles avec vrais aperçus + panneau réel + 3 étapes.
 4. **Installation & soutien** — Chrome Web Store, GitHub, Ko-fi (https://ko-fi.com/pouark).
 
-Navigation collante : ancre démo, GitHub, bascule FR/EN, CTA. Pied de page : confidentialité,
+Navigation collante : ancre démo, GitHub, bouton Ko-fi, bascule FR/EN, CTA. Pied de page : confidentialité,
 PK-Labs, Ko-fi via section soutien, bouton « réduire les animations ».
 
 ## Animations

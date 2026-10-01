@@ -1,5 +1,9 @@
 # Changelog
 
+## [2026.10.2] - 2026-10-01
+### Added
+- Bouton Ko-fi compact (variante `.small`, tasse au cœur) dans la barre de navigation de la landing, entre le lien GitHub et la bascule FR/EN. Desktop uniquement, comme le CTA « Ajouter à Chrome » (la nav mobile reste minimale). `PLAN.md` synchronisé.
+
 ## [2026.10.1] - 2026-10-01
 ### Added
 - Bouton Ko-fi dédié dans la section soutien de la landing (`store/index.html`) : pilule rouge aux couleurs de la marque (`#ff5e5b`), tasse au cœur en SVG inline (aucun CDN), libellés FR/EN, cible `noopener noreferrer`. Remplace le lien texte souligné.
