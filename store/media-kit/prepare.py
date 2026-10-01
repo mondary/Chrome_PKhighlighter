@@ -15,10 +15,12 @@ def main():
     parser.add_argument('--wallpaper', type=Path)
     parser.add_argument('--vendor', action='store_true')
     args = parser.parse_args()
-    assets = STORE / 'assets'
-    assets.mkdir(exist_ok=True)
+    assets = STORE / 'website/assets'
+    (assets / 'styles').mkdir(parents=True, exist_ok=True)
+    listing = STORE / 'listing'
+    sources = STORE / 'media-kit' / 'sources'
     if args.vendor:
-        vendor = STORE / 'vendor'
+        vendor = STORE / 'website/vendor'
         vendor.mkdir(exist_ok=True)
         sources = {
             'gsap.min.js': 'https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js',
@@ -39,7 +41,7 @@ def main():
         image.thumbnail((1600, 1600))
         image.save(assets / 'wallpaper-1600.webp', quality=86)
         ImageOps.fit(image, (800, 900), centering=(.5, .52)).save(assets / 'wallpaper-mobile.webp', quality=82)
-        (assets / 'provenance.json').write_text(json.dumps({
+        (STORE / 'media-kit' / 'provenance.json').write_text(json.dumps({
             'wallpaper': {'library': 'premium-promo-media/assets/wallpapers', 'id': '8de42736e150',
                           'sha256': hashlib.sha256(args.wallpaper.read_bytes()).hexdigest(),
                           'source_name': 'Image ChatGPT 28 sept. 2026, 10_45_19.png',
@@ -50,30 +52,32 @@ def main():
                             'data': 'fictional editorial text',
                             'bridge': 'chrome.runtime.onMessage is a no-op in the web fixture; no installed-extension claim'},
         }, ensure_ascii=False, indent=2) + '\n')
-    names = {'05-reading-after': 'reading-after', '06-reading-before': 'reading-before', '07-settings': 'reading-settings'}
-    for original, name in names.items():
-        path = STORE / 'screenshots' / (original + '.png')
+    names = {'05-reading-after': ('reading-after', (1280,)), '06-reading-before': ('reading-before', (1280,)), '07-settings': ('reading-settings', (1280, 1920))}
+    for original, (name, widths) in names.items():
+        path = STORE / 'listing/screenshots' / (original + '.png')
         if path.exists():
             with Image.open(path) as source:
-                for width in (1280, 1920):
+                for width in widths:
                     image = source.convert('RGB')
                     image.thumbnail((width, 2000))
                     image.save(assets / f'{name}-{width}.webp', quality=88)
-    for path in [assets / 'settings.png', *sorted((assets / 'styles').glob('*.png'))]:
-        if path.exists():
-            with Image.open(path) as image:
-                if path.name == 'settings.png':
-                    image = image.crop((32, 32, image.width - 32, image.height - 32)).convert('RGBA')
-                    mask = Image.new('L', image.size)
-                    ImageDraw.Draw(mask).rounded_rectangle((0, 0, image.width, image.height), radius=20, fill=255)
-                    image.putalpha(mask)
-                image.save(path.with_suffix('.webp'), quality=92)
+    settings_png = sources / 'settings.png'
+    if settings_png.exists():
+        with Image.open(settings_png) as image:
+            image = image.crop((32, 32, image.width - 32, image.height - 32)).convert('RGBA')
+            mask = Image.new('L', image.size)
+            ImageDraw.Draw(mask).rounded_rectangle((0, 0, image.width, image.height), radius=20, fill=255)
+            image.putalpha(mask)
+            image.save(assets / 'settings.webp', quality=92)
+    for path in sorted((sources / 'styles').glob('*.png')):
+        with Image.open(path) as image:
+            image.save(assets / 'styles' / (path.stem + '.webp'), quality=92)
     with Image.open(STORE.parent / 'icon.png') as icon:
         icon.thumbnail((128, 128))
         icon.save(assets / 'icon-128.webp', quality=90)
     # Social exports: authentic screenshot composed with the selected wallpaper.
     if (assets / 'wallpaper-1600.webp').exists() and (STORE / 'listing/screenshots/07-settings.png').exists():
-        for width, height, name in [(1544, 500, 'banner-1544x500.png'), (1200, 630, 'card-1200x630.png')]:
+        for width, height, name, target in [(1544, 500, 'banner-1544x500.png', listing), (1200, 630, 'card-1200x630.png', assets)]:
             poster = Image.new('RGB', (width, height), '#f5f5f7')
             draw = ImageDraw.Draw(poster)
             font = lambda size: ImageFont.truetype('/System/Library/Fonts/Helvetica.ttc', size)
@@ -95,7 +99,7 @@ def main():
             mask = Image.new('L', screen.size)
             ImageDraw.Draw(mask).rounded_rectangle((0, 0, screen.width, screen.height), radius=10, fill=255)
             poster.paste(screen, (photo_left + 25, y), mask)
-            poster.convert('RGB').save(assets / name, optimize=True)
+            poster.convert('RGB').save(target / name, optimize=True)
     print('Local media prepared.')
 
 

@@ -14,7 +14,7 @@ tel quel sur l'hébergement (FTP). Aucun fichier du site ne vit en dehors.
 | `website/privacy-policy-pk-highlighter.html` | Politique de confidentialité (URL déclarée chez CWS) |
 | `website/hero-scene.js` | Scène Three.js du hero (chargé dynamiquement, fallback sans WebGL) |
 | `website/icon-128.png` | Icône produit (logo de la page confidentialité, upload CWS) |
-| `website/assets/` | Assets web : icônes, wallpapers, captures lecture, aperçus des 7 styles, bannière, carte + `provenance.json` |
+| `website/assets/` | Uniquement les images utilisées par la landing (wallpapers, captures lecture, aperçus webp des 7 styles, icône, carte og). Sources PNG de fabrication : `media-kit/sources/` · provenance wallpaper : `media-kit/provenance.json` |
 | `website/vendor/` | GSAP + Three.js locaux, versions figées, checksums dans `sources.json` — jamais utilisés par l'extension |
 
 Règle : pour déployer ou mettre à jour le site, synchroniser ce dossier, rien d'autre.
@@ -25,7 +25,7 @@ et la page confidentialité en chemins relatifs.
 
 | Dossier / fichier | Contenu | Utilisé par |
 |---|---|---|
-| `listing/` | **Fiche Chrome Web Store** : description, captures numérotées 01–08, images promo (440×280, 1400×560) | Upload manuel dans le dashboard CWS |
+| `listing/` | **Fiche Chrome Web Store + visuels marketing** : description, captures numérotées 01–08, images promo (440×280, 1400×560), bannière 1544×500, cartes sociales | Upload manuel dans le dashboard CWS, réseaux |
 | `gifs/` | Démos animées (`demo-wide.gif`, `demo-compact.gif`) | READMEs, réseaux |
 | `videos/` | Vidéo de démo (`demo.mp4`) | READMEs, réseaux |
 | `media-kit/` | Outillage de régénération (captures, film, vérification, `demo.html`) — voir son [README](media-kit/README.md) | Travail local, `frames/` ignoré par git |

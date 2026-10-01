@@ -14,7 +14,7 @@ Direction approuvée le 29 septembre 2026 — source de vérité pour toute rég
 ## Structure
 
 1. **Hero** — thèse + CTA « Ajouter à Chrome » / « Voir la démo ». Fenêtre navigateur posée sur
-   le wallpaper sélectionné (paysage doré, id `8de42736e150`, voir `website/assets/provenance.json`).
+   le wallpaper sélectionné (paysage doré, id `8de42736e150`, voir `media-kit/provenance.json`).
    Ruban Three.js discret derrière la fenêtre (parallaxe limitée, arrêté hors écran).
 2. **Avant / Après** — comparateur à boutons (clavier), mêmes cadrages, exclusion barrée visible.
 3. **Styles & réglages** — sélecteur des 7 styles avec vrais aperçus + panneau réel + 3 étapes.

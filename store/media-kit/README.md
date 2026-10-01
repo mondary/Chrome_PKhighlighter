@@ -37,7 +37,7 @@ ego-browser nodejs -e 'const {verify}=await import("file://<repo>/store/media-ki
   `chrome.runtime.onMessage` est un no-op hors extension installée ; les captures montrent donc
   le rendu du content script, pas la toolbar installée. Paramètres : `?before`, `?style=…`,
   `?sample` (mot isolé pour les aperçus de styles).
-- **Wallpaper hero** : voir `assets/provenance.json` (id SHA-256, origine appWall, cadrage).
+- **Wallpaper hero** : voir `media-kit/provenance.json` (id SHA-256, origine appWall, cadrage).
   Catalogue complet : skill `premium-promo-media` du hub (`assets/wallpapers/index.html`).
 - **Bibliothèques** : GSAP 3.15.0 (licence standard GreenSock), Three.js 0.180.0 (MIT) —
   fichiers locaux dans `store/website/vendor/`, checksums dans `vendor/sources.json`. Elles ne servent

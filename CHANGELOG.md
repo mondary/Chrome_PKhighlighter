@@ -1,5 +1,10 @@
 # Changelog
 
+## [2026.10.4] - 2026-10-01
+### Changed
+- `website/assets/` réduit aux seuls fichiers utilisés par la landing (30 → 16 fichiers) : les sources PNG de fabrication vont dans `media-kit/sources/`, la bannière et la carte sociale dans `listing/`, la provenance du wallpaper dans `media-kit/provenance.json`, les déclinaisons 1920 px non référencées (`reading-before/after`) supprimées.
+- `prepare.py` réaligné sur la nouvelle arborescence (écrit dans `website/assets`, `website/vendor`, `listing/`, lit les sources dans `media-kit/sources/`) — corrige au passage deux chemins cassés depuis le refacto `listing/`.
+
 ## [2026.10.3] - 2026-10-01
 ### Changed
 - Dossier `store/website/` autoporté : la landing, la page confidentialité, `icon-128.png`, `assets/`, `vendor/` et `hero-scene.js` (relogé depuis `media-kit/`, requis au runtime) vivent désormais tous dans le même dossier — déployable tel quel par FTP. Imports et chemins relatifs corrigés, `verify.mjs` pointe vers `/store/website/`, README carte et `PLAN.md` synchronisés.
