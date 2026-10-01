@@ -1,5 +1,9 @@
 # Changelog
 
+## [2026.10.3] - 2026-10-01
+### Changed
+- Dossier `store/website/` autoporté : la landing, la page confidentialité, `icon-128.png`, `assets/`, `vendor/` et `hero-scene.js` (relogé depuis `media-kit/`, requis au runtime) vivent désormais tous dans le même dossier — déployable tel quel par FTP. Imports et chemins relatifs corrigés, `verify.mjs` pointe vers `/store/website/`, README carte et `PLAN.md` synchronisés.
+
 ## [2026.10.2] - 2026-10-01
 ### Added
 - Bouton Ko-fi compact (variante `.small`, tasse au cœur) dans la barre de navigation de la landing, entre le lien GitHub et la bascule FR/EN. Desktop uniquement, comme le CTA « Ajouter à Chrome » (la nav mobile reste minimale). `PLAN.md` synchronisé.

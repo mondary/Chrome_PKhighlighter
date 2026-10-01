@@ -40,7 +40,7 @@ ego-browser nodejs -e 'const {verify}=await import("file://<repo>/store/media-ki
 - **Wallpaper hero** : voir `assets/provenance.json` (id SHA-256, origine appWall, cadrage).
   Catalogue complet : skill `premium-promo-media` du hub (`assets/wallpapers/index.html`).
 - **Bibliothèques** : GSAP 3.15.0 (licence standard GreenSock), Three.js 0.180.0 (MIT) —
-  fichiers locaux dans `store/vendor/`, checksums dans `vendor/sources.json`. Elles ne servent
+  fichiers locaux dans `store/website/vendor/`, checksums dans `vendor/sources.json`. Elles ne servent
   que la page promo, jamais l'extension.
 
 ## Limites connues

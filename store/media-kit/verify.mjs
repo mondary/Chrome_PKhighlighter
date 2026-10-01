@@ -17,7 +17,7 @@ export async function verify({taskSpace, spaceId = 26, base = 'http://127.0.0.1:
     for (const width of [390,768,1440,1920]) {
       await page.cdp('Emulation.setDeviceMetricsOverride',{width,height:width<768?844:1000,deviceScaleFactor:1,mobile:width<768});
       for (const lang of ['fr','en']) {
-        await page.goto(base + '/store/');
+        await page.goto(base + '/store/website/');
         await page.click(`[data-lang="${lang}"]`);
         await page.waitForFunction(()=>!window.gsap||!gsap.isTweening('.hero-copy > *'));
         assert.equal(await page.evaluate(()=>document.documentElement.lang),lang);

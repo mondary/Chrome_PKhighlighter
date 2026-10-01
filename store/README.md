@@ -3,35 +3,32 @@
 Matériel de présentation et de publication de PK Highlighter.
 Détail du dossier de la fiche : [listing/description.md](listing/description.md).
 
-## 🌍 Fichiers publiés — ne pas déplacer
+## 🌍 `website/` — Le site complet, autoporté
 
-Ces fichiers sont servis par GitHub Pages et leurs URLs sont déclarées dans la fiche
-Chrome Web Store. Les déplacer casserait des liens publics.
+**Tout ce qui constitue le site web tient dans ce dossier** : c'est lui qu'on uploade
+tel quel sur l'hébergement (FTP). Aucun fichier du site ne vit en dehors.
 
-| Fichier | Rôle | URL publique |
-|---|---|---|
-| `index.html` | Landing promo bilingue FR/EN | `https://pkhighlighter.mondary.design/store/` |
-| `privacy-policy-pk-highlighter.html` | Politique de confidentialité (URL déclarée chez CWS) | `…/store/privacy-policy-pk-highlighter.html` |
-| `icon-128.png` | Icône de la fiche CWS + logo de la page confidentialité | — (référencé par la page) |
+| Fichier / dossier | Rôle |
+|---|---|
+| `website/index.html` | Landing promo bilingue FR/EN (page d'entrée) |
+| `website/privacy-policy-pk-highlighter.html` | Politique de confidentialité (URL déclarée chez CWS) |
+| `website/hero-scene.js` | Scène Three.js du hero (chargé dynamiquement, fallback sans WebGL) |
+| `website/icon-128.png` | Icône produit (logo de la page confidentialité, upload CWS) |
+| `website/assets/` | Assets web : icônes, wallpapers, captures lecture, aperçus des 7 styles, bannière, carte + `provenance.json` |
+| `website/vendor/` | GSAP + Three.js locaux, versions figées, checksums dans `sources.json` — jamais utilisés par l'extension |
 
-La landing référence `assets/`, `vendor/` et les GIF/vidéos en chemins relatifs :
-leur emplacement est donc également figé.
+Règle : pour déployer ou mettre à jour le site, synchroniser ce dossier, rien d'autre.
+`index.html` n'est **pas** autonome seul — il référence `assets/`, `vendor/`, `hero-scene.js`
+et la page confidentialité en chemins relatifs.
 
-## 📁 Dossiers
+## 📁 Le reste du dossier
 
-| Dossier | Contenu | Utilisé par |
+| Dossier / fichier | Contenu | Utilisé par |
 |---|---|---|
 | `listing/` | **Fiche Chrome Web Store** : description, captures numérotées 01–08, images promo (440×280, 1400×560) | Upload manuel dans le dashboard CWS |
-| `assets/` | Assets web de la landing (icône, wallpapers, captures lecture, aperçus des 7 styles, bannière, carte) + `provenance.json` | `index.html` |
 | `gifs/` | Démos animées (`demo-wide.gif`, `demo-compact.gif`) | READMEs, réseaux |
 | `videos/` | Vidéo de démo (`demo.mp4`) | READMEs, réseaux |
-| `vendor/` | GSAP + Three.js locaux, versions figées, checksums dans `sources.json` | `index.html` uniquement — jamais l'extension |
-| `media-kit/` | Outillage de régénération (captures, film, dérivés web) — voir son [README](media-kit/README.md) | Travail local, `frames/` ignoré par git |
-
-## 📄 Fichiers de travail
-
-| Fichier | Rôle |
-|---|---|
+| `media-kit/` | Outillage de régénération (captures, film, vérification, `demo.html`) — voir son [README](media-kit/README.md) | Travail local, `frames/` ignoré par git |
 | `PLAN.md` | Direction approuvée de la landing — source de vérité pour toute régénération |
 | `README.md` | Cette carte |
 
@@ -42,5 +39,6 @@ l'extension : suivre le flux documenté dans [`media-kit/README.md`](media-kit/R
 
 ## Historique
 
-- 2026-10 : refacto — dossier `listing/` créé (ex-captures et promos en racine),
-  doublons PNG et docs obsolètes supprimés, README carte ajouté.
+- 2026-10 : refacto — dossier `website/` autoporté créé (site complet déployable tel quel),
+  `hero-scene.js` relogé depuis `media-kit/` (il est requis au runtime), dossier `listing/`
+  pour la fiche CWS, doublons PNG et docs obsolètes supprimés, README carte ajouté.

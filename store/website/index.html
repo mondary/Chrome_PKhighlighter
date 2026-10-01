@@ -145,7 +145,7 @@
         }
         document.dispatchEvent(new CustomEvent('pkh:motion', {detail:{off}}));
         if (!off && innerWidth >= 768 && location.protocol !== 'file:' && !threeModule) {
-          threeModule = import('./media-kit/hero-scene.js').then(m => m.mount(document.querySelector('#hero-stage'))).catch(() => { root.dataset.webgl = 'unavailable'; });
+          threeModule = import('./hero-scene.js').then(m => m.mount(document.querySelector('#hero-stage'))).catch(() => { root.dataset.webgl = 'unavailable'; });
         }
       }
       motionButton.addEventListener('click', () => { manualReduced = !manualReduced; updateMotion(); });

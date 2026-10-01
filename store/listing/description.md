@@ -1,7 +1,7 @@
 # PK Highlighter — Dossier du store
 
 Matériel de présentation de l'application.
-Landing : `store/index.html` (bilingue FR/EN). Captures : `store/listing/screenshots/`.
+Landing : `store/website/index.html` (bilingue FR/EN, dossier autoporté = `store/website/`). Captures : `store/listing/screenshots/`.
 Carte complète du dossier `store/` : [store/README.md](../README.md).
 
 ---

@@ -14,7 +14,7 @@ Direction approuvée le 29 septembre 2026 — source de vérité pour toute rég
 ## Structure
 
 1. **Hero** — thèse + CTA « Ajouter à Chrome » / « Voir la démo ». Fenêtre navigateur posée sur
-   le wallpaper sélectionné (paysage doré, id `8de42736e150`, voir `assets/provenance.json`).
+   le wallpaper sélectionné (paysage doré, id `8de42736e150`, voir `website/assets/provenance.json`).
    Ruban Three.js discret derrière la fenêtre (parallaxe limitée, arrêté hors écran).
 2. **Avant / Après** — comparateur à boutons (clavier), mêmes cadrages, exclusion barrée visible.
 3. **Styles & réglages** — sélecteur des 7 styles avec vrais aperçus + panneau réel + 3 étapes.
@@ -25,7 +25,7 @@ PK-Labs, Ko-fi via section soutien, bouton « réduire les animations ».
 
 ## Animations
 
-- GSAP + ScrollTrigger (locaux, `vendor/`, versions figées) : entrée hero, redressement
+- GSAP + ScrollTrigger (locaux, `website/vendor/`, versions figées) : entrée hero, redressement
   `rotationX` de la fenêtre, parallaxe du wallpaper, révélations de titres. `transform`/`opacity`
   uniquement.
 - Three.js (local) : un seul ruban `TubeGeometry`-like, `MeshStandardMaterial`, pixelRatio ≤ 1,5 ;

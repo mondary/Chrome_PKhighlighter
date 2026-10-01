@@ -1,4 +1,4 @@
-import * as THREE from '../vendor/three.module.min.js';
+import * as THREE from './vendor/three.module.min.js';
 
 // One ribbon of highlighter ink behind the real screenshot. No text is rendered in WebGL.
 export function mount(host) {
